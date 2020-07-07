@@ -9,8 +9,8 @@ export default function Catalog(props) {
   const [ allData, setAllData ] = useState([])
 
   useEffect(() => {
-    (props || props.addCartItems || props.searchList.length === 0) ? loadPokemon(limit, offset) : setAllData(props.searchList)
-  }, [offset, props])
+    (props.searchList.length === 0) ? loadPokemon(limit, offset) : setAllData(props.searchList)
+  }, [offset, props.searchList])
 
   async function loadPokemon(limit, offset) {
     setOffset(0)
