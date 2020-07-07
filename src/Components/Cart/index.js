@@ -11,24 +11,24 @@ export default function Cart(props) {
 
   function laodCartItem() {
 
-    if (cartItems.length === 0) {
-      return <div className="card-body px-4">Carrinho vazio!</div>
-    }
-    
-    return cartItems.map((pokemon, index) => {
-      const { name, price, image } = pokemon
-      return (
-        <div className="card-body px-4" key={index}>                        
-          <div className="media border-bottom py-1">
-            <img src={ image } alt={ name } className="mr-3" />
-            <div className="media-body">
-              <p className="my-0 font-weight-bold">{ name }</p>
-              <span className="font-weight-bold text-name-price">{ price }</span>
+    if (cartItems && cartItems.length > 0) {
+      return cartItems.map((pokemon, index) => {
+        const { name, price, image } = pokemon
+        return (
+          <div className="card-body px-4" key={index}>                        
+            <div className="media border-bottom py-1">
+              <img src={ image } alt={ name } className="mr-3" />
+              <div className="media-body">
+                <p className="my-0 font-weight-bold">{ name }</p>
+                <span className="font-weight-bold text-name-price">{ price }</span>
+              </div>
             </div>
           </div>
-        </div>
-      )
-    })
+        )
+      })
+    }
+     
+    return <div className="card-body px-4">Carrinho vazio!</div>   
   }
 
   return (
