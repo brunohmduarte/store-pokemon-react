@@ -1,11 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import * as S from './style'
 
 export default function Cart(props) {
-
-  useEffect(() => {
-    laodCartItem()
-  }, [props.addCartItems])
 
   function laodCartItem() {
 
