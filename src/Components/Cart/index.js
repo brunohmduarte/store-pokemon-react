@@ -5,7 +5,7 @@ export default function Cart(props) {
 
   function laodCartItem() {
 
-    if (props.addCartItems.length === 0 || props.searchList === null) {
+    if (props || props.addCartItems || props.addCartItems.length === 0) {
       return <div className="card-body px-4">Carrinho vazio!</div>
     }
     
