@@ -11,7 +11,7 @@ export default function Cart(props) {
 
   function laodCartItem() {
 
-    if (cartItems && cartItems.length > 0) {
+    if (cartItems != null && cartItems.length > 0) {
       return cartItems.map((pokemon, index) => {
         const { name, price, image } = pokemon
         return (
