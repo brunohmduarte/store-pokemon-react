@@ -20,7 +20,7 @@ export default function Header(props) {
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light border-bottom mb-5 shadow">
-      <a className="navbar-brand" href="http://localhost:3000/">
+      <a className="navbar-brand" href="https://lojadopokemon.netlify.app/">
         <img src={ logo } alt="Logo marca" width="80%" />
       </a>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

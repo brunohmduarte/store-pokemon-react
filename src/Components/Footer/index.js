@@ -6,7 +6,7 @@ export default function Footer() {
     <S.Footer >
       <div className="container">
         <S.Paragraph className="float-right">
-          <S.Link href="#" target="_blank" title="Repositório no Github">
+          <S.Link href="https://github.com/brunohmduarte/store-pokemon-react/" target="_blank" title="Repositório no Github">
             <i className="fa fa-github" aria-hidden="true"></i>
             </S.Link>
           <S.Link href="https://www.linkedin.com/in/brunohmduarte/" target="_blank" title="Perfil no LinkedIn">
