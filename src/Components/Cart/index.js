@@ -1,15 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import * as S from './style'
 
 export default function Cart(props) {
 
+  const [ cartItems, setCartItems ] = useState([])
+  
+  useEffect(() => {
+    setCartItems(JSON.parse(props.addCartItems))
+  }, [props])
+
   function laodCartItem() {
 
-    if (JSON.parse(props.addCartItems).length === 0) {
+    if (cartItems.length === 0) {
       return <div className="card-body px-4">Carrinho vazio!</div>
     }
     
-    return JSON.parse(props.addCartItems).map((pokemon, index) => {
+    return cartItems.map((pokemon, index) => {
       const { name, price, image } = pokemon
       return (
         <div className="card-body px-4" key={index}>                        
