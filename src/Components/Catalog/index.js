@@ -4,8 +4,6 @@ import { allPokemon } from '../../services/api'
 
 export default function Catalog(props) {
 
-  console.log('catalago...')
-
   const limit = 12
   const [ offset, setOffset ] = useState(0)
   const [ allData, setAllData ] = useState([])
