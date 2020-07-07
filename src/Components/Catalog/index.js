@@ -9,7 +9,7 @@ export default function Catalog(props) {
   const [ allData, setAllData ] = useState([])
 
   useEffect(() => {
-    (props.searchList.length === 0) ? loadPokemon(limit, offset) : setAllData(props.searchList)
+    (props.searchList.length === 0 || props.searchList === null) ? loadPokemon(limit, offset) : setAllData(props.searchList)
   }, [offset, props.searchList])
 
   async function loadPokemon(limit, offset) {
