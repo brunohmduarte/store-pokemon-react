@@ -5,11 +5,13 @@ export default function Cart(props) {
 
   function laodCartItem() {
 
-    if (JSON.parse(props.addCartItems).length === 0) {
+    const cartItems = JSON.parse(props.addCartItems)
+
+    if (cartItems.length === 0) {
       return <div className="card-body px-4">Carrinho vazio!</div>
     }
     
-    return JSON.parse(props.addCartItems).map((pokemon, index) => {
+    return cartItems.map((pokemon, index) => {
       const { name, price, image } = pokemon
       return (
         <div className="card-body px-4" key={index}>                        
